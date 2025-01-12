@@ -1,0 +1,64 @@
+.text-underline-hover {
+    text-decoration: none;
+}
+
+.text-underline-hover:hover {
+    text-decoration: underline;
+}
+
+a:not([class]) {
+    text-decoration: none;
+}
+
+a:not([class]):hover {
+    text-decoration: underline;
+}
+hr.dotted {
+    border-top: 2px dashed white;
+}
+body{
+    /* background-color: rgb(252, 135, 135); */
+    /* background: linear-gradient(90deg, rgb(229, 228, 235) 0%, rgba(9,62,121,1) 35%, rgba(0,212,255,1) 100%); */
+}
+/* indicator */
+.di{
+    margin-left: 48%;
+    height: 40px;
+    width: 150px;
+    border-radius: 25px;
+}
+.btnc{
+    align-items: center;
+    display: flex;
+    /* font-size: 10px; */
+    width: 10px;
+    height: 10px;
+    justify-content: center;
+    border-radius: 50%;
+    background-color: white;
+    
+
+}
+.bi{
+    width: 50px;
+    height: 50px;
+    margin-left: 3%;
+    margin-top: 13%;
+    border-radius: 25px;
+    border: 5px white;
+    cursor: pointer;
+}
+.bi2{
+    width: 50px;
+    height: 50px;
+    margin-right: 3%;
+    margin-top: 13%;
+    border-radius: 25px;
+    border: 5px white;
+}
+#imgAll{
+    transform: scale(1);
+}
+#imgAll :hover{
+    transform: scale(3);
+}

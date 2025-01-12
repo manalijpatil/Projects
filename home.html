@@ -1,0 +1,1366 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>BigBasket</title>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/css/bootstrap.min.css" rel="stylesheet"
+    integrity="sha384-rbsA2VBKQhggwzxH7pPCaAqO46MgnOM80zW1RWuH61DGLwZJEdK2Kadq2F9CUG65" crossorigin="anonymous">
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.bundle.min.js"
+    integrity="sha384-kenU1KFdBIe4zVF0s0G1M5b4hcpxyD9F7jL+jjXkk+Q2h455rYXK/7HAuoJl+0I4"
+    crossorigin="anonymous"></script>
+
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css"
+    integrity="sha512-Kc323vGBEqzTmouAECnVceyQqyqdsSiqLQISBL29aUW4U/M7pSPA/gEUZQqv1cwx4OnYxTxve5UMg5GT6L4JJg=="
+    crossorigin="anonymous" referrerpolicy="no-referrer" />
+  <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+  <!-- header -->
+  <header class="sticky-top bg-white">
+    <nav class="navbar-nav shadow mb-3">
+      <div class="container-fluid bg-success bg-opacity-75" style="height: 5px;"></div>
+      <div class="container" style="height: 100px;">
+        <div class="row">
+          <!-- logo -->
+          <div class="col">
+            <a href="#">
+              <img src="media/logo.png" width="150" alt="bigb">
+            </a>
+          </div>
+          <!-- search bar -->
+          <div class="col-5 mt-5">
+            <form class="d-flex" role="search">
+              <input class="form-control me-2" type="search" placeholder="Search for Products" aria-label="Search">
+              <!-- <button class="btn btn-outline-success" type="submit">Search</button> -->
+            </form>
+          </div>
+
+          <!-- select location -->
+          <div class="col mt-5 sticky-top">
+            <p>
+              <button class="btn bg-secondary bg-opacity-25" type="button" data-bs-toggle="collapse"
+                data-bs-target="#collapseWidthExample" aria-expanded="false" aria-controls="collapseWidthExample">
+                <i class="fa fa-compass text-dark"></i>
+                Select Location
+              </button>
+            </p>
+            <div style="min-height: 120px;">
+              <div class="collapse collapse-bottom" id="collapseWidthExample">
+                <div class="card card-body" style="width: 300px;">
+                  <h5>Select a location for delivery</h5>
+                  <p>choose your address location to see product availability and delivery options</p>
+                  <input type="search" placeholder="Search for area or street name">
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- sign in -->
+          <div class="col mt-5">
+            <button type="button" class="btn bg-black text-white" data-bs-toggle="modal" data-bs-target="#exampleModal"
+              data-bs-whatever="@mdo">Login or Sign Up</button>
+
+            <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel"
+              aria-hidden="true">
+              <div class="modal-dialog">
+                <div class="modal-content">
+                  <div class="row">
+                    <div class="col py-2">
+                      <p class="text-align ms-5">Why Choose Bigbasket?</p>
+                      <div class="ms-2 d-inline">
+                        <i class="fa-solid fa-medal"></i>
+                        Quality
+                      </div>
+                      <div class="d-inline">
+                        <i class="fas fa-clock"></i>
+                        On time
+                      </div> <br>
+                      <div class="ms-2 d-inline">
+                        <i class="fa-solid fa-truck"></i>
+                        Return Policy
+                      </div>
+                      <div class="d-inline">
+                        <i class="fa-solid fa-bag-shopping"></i>
+                        Free Delivery
+                      </div>
+                      <div class="border border-bottom-1 border-dark mb-2"></div>
+                      <!-- <span class="border border-bottom-2 border-dark"></span> -->
+                      <div>
+                        Find us on
+                        <i class="fa-brands fa-google-play"></i>
+                        <i class="fa-brands fa-apple"></i>
+                      </div>
+                    </div>
+                    <div class="col-8 bg-dark text-light">
+                      <h3>Login/Sign up</h3>
+                      <p class="border border-bottom border-warning">Using OTP</p>
+                      <input type="text" placeholder="Enter Phone number/Email Id">
+                      <button>continue</button>
+                      <p>By Continuing , I accept TCP - <a href="#">bigbasket's Terms and
+                          conditions</a>& <a href="#">Privacy Policy</a>
+                        This site is protected by reCAPTCHA and the
+                        Google - <a href="#">Privacy Policy</a> and & <a href="#">Terms of service
+                          apply.
+                        </a></p>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+        </div>
+      </div>
+
+      <div class="container mt-1 mb-2">
+        <div class="row">
+          <div class="col-2">
+            <button class="btn btn-success">Shop by category</button>
+          </div>
+          <div class="col-8">
+            <ul type="none" class="d-flex flex-row">
+              <li class="me-4">
+                <a href="#" class="text-black text-underline-hover">Exoctic Fruits & Vegetables</a>
+              </li>
+              <li class="me-4">
+                <a href="#" class="text-black  text-underline-hover">Tea</a>
+              </li>
+              <li class="me-4">
+                <a href="#" class="text-black  text-underline-hover">Ghee</a>
+              </li>
+              <li class="me-4">
+                <a href="#" class="text-black  text-underline-hover">Nandini</a>
+              </li>
+              <li class="me-4">
+                <a href="#" class="text-black  text-underline-hover">Fresh Vegetables</a>
+              </li>
+            </ul>
+          </div>
+          <div class="col">
+            <a href="#">
+              <img src="media/smart-basket.jpg" alt="" class="me-2">
+            </a>
+            <a href="#">
+              <img src="media/offers.jpg" alt="">
+            </a>
+          </div>
+        </div>
+      </div>
+    </nav>
+  </header>
+  <!-- main -->
+  <main>
+    <!-- carousel-1 -->
+    <div class="container">
+      <div id="carouselExample" class="carousel slide" data-bs-ride="carousel" data-bs-interval="3000"
+        data-bs-pause="false">
+        <div class="carousel-inner rounded-3">
+          <div class="carousel-item active">
+            <img src="media/car1.jpg" class="d-block w-100" alt="Slide 1">
+          </div>
+          <div class="carousel-item">
+            <img src="media/car2.jpg" class="d-block w-100" alt="Slide 2">
+          </div>
+          <div class="carousel-item">
+            <img src="media/car3.jpg" class="d-block w-100" alt="Slide 3">
+          </div>
+        </div>
+
+        <!-- Carousel Controls (Optional) -->
+        <button class="carousel-control-prev" type="button" data-bs-target="#carouselExample" data-bs-slide="prev">
+          <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+          <span class="visually-hidden">Previous</span>
+        </button>
+        <button class="carousel-control-next" type="button" data>
+          <span class="carousel-control-next-icon" aria-hidden="true"></span>
+        </button>
+      </div>
+
+      <!-- options -->
+      <div class="container text-center fw-bold mt-2">
+        <div class="row">
+          <div class="col bg-secondary bg-opacity-25 p-3 me-3 rounded-4">
+            <a href="#" class="text-decoration-none text-dark">EGGS, MEAT AND FISH</a>
+          </div>
+          <div class="col rounded me-3">
+            <a href="#">
+              <img src="media/neupass1.png" class="rounded-4" alt="" style="width: 200px;" class="rounded">
+            </a>
+          </div>
+          <div class="col p-3 me-3 bg-success rounded-4">
+            <a href="#" class="text-decoration-none text-dark">AYURVEDA</a>
+          </div>
+          <div class="col p-2 rounded-4 bg-secondary bg-opacity-25 me-3">
+            <a href="#" class="text-decoration-none text-dark">BUY MORE SAVE MORE</a>
+          </div>
+          <div class="col p-2 rounded-4 bg-secondary bg-opacity-25 me-3">
+            <a href="#" class="text-decoration-none text-dark">DEALS OF THE WEEK</a>
+          </div>
+          <div class="col p-2 rounded-4 bg-secondary bg-opacity-25">
+            <a href="#" class="text-decoration-none text-dark">COMBO STORE</a>
+          </div>
+        </div>
+      </div>
+
+      <!-- my smart basket -->
+      <!-- 1.capsicum -->
+      <div class="container mt-4 p-2 bg-secondary bg-opacity-25">
+        
+          <div class="row">
+            <div class="col-10">
+              <h4 class="text-dark text-start mb-4">My Smart Basket</h4>
+            </div>
+            <div class="col">
+              <a href="#" class="text-secondary fs-6 me-2">View All</a>
+              <button type="button" class="btn btn-light disabled"><a href="#"><i class="fa-solid fa-chevron-left text-secondary"></i></a></button>
+              <button type="button" class="btn btn-light"><a href="#"><i class="fa-solid fa-chevron-right text-secondary"></i></a></button>
+            </div>
+          </div>
+       
+        <div class="row">
+          <div class="col-3">
+            <div class="card">
+              <a href="#">
+                <span class="bg-success rounded-end text-white fixed left p-3">25% OFF</span>
+                <img src="media/capsicum.jpg" alt="my-image" width="80%" class="p-3 ms-4 rounded"
+                  title="fresho! Capsicum - Green(Loose) 1 kg"  id="imgAll">
+              </a>
+              <div class="card-header text-center">
+                <p class="text-warning text-start">fresho!</p>
+              </div>
+              <div class="card-body">
+                <h5 class="card-title">Capsicum - Green(Loose)</h5>
+                <ul class="me-auto mb-2 mb-lg-0" type="none">
+                  <li class="dropdown">
+                    <a class="dropdown-toggle text-decoration-none text-dark border border-light-subtle ps-5 pe-5 border-danger-hover"
+                      href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                      1 Kg
+                    </a>
+                    <ul class="dropdown-menu">
+                      <li class="border-secondary"><a class="dropdown-item" href="#">
+                          500 g
+                          <p>27% OFF</p> <b>$21</b><del>$28.77</del>
+                        </a></li>
+                      <li><a class="dropdown-item" href="#">
+                          250 g
+                          <p>24% OFF</p> <b>$11.45</b><del>$15.07</del>
+                        </a></li>
+                      <li><a class="dropdown-item active" href="#">
+                          1 Kg
+                          <p>24% OFF</p> <b>$83.29</b><del>$109.59</del>
+                        </a></li>
+                      <li><a class="dropdown-item" href="#">
+                          3 Kg
+                        </a></li>
+                      <li>
+                        <hr class="dropdown-divider">
+                      </li>
+                    </ul>
+                  </li>
+                </ul>
+              </div>
+              <div class="card-footer mx-auto w-100">
+                <button class="btn btn-secondary ms-2" type="button" data-bs-toggle="tooltip" data-bs-placement="bottom"
+                  data-bs-title="Save for Later"><i class="fa-regular fa-bookmark"></i></button>
+                <button class="btn btn-outline-danger ps-5 pe-5 w-75">Add</button>
+              </div>
+            </div>
+          </div>
+          <!-- 2.carrot -->
+          <div class="col-3">
+            <div class="card">
+              <a href="#">
+                <span class="bg-success rounded-end text-white fixed left p-3">38% OFF</span>
+                <img src="media/carrot.jpg" alt="my-image" width="80%" class="p-3 ms-4 rounded"
+                  title="fresho! carrot - Orange(Loose) 1 kg">
+              </a>
+              <div class="card-header text-center">
+                <p class="text-warning text-start">fresho!</p>
+              </div>
+              <div class="card-body">
+                <h5 class="card-title">Carrot - Orange(Loose)</h5>
+                <ul class="me-auto mb-2 mb-lg-0" type="none">
+                  <li class="dropdown">
+                    <a class="dropdown-toggle text-decoration-none text-dark border border-light-subtle ps-5 pe-5" href="#" role="button"
+                      data-bs-toggle="dropdown" aria-expanded="false">
+                      1 Kg
+                    </a>
+                    <ul class="dropdown-menu">
+                      <li class="border-secondary"><a class="dropdown-item" href="#">
+                          500 g
+                          <p>27% OFF</p> <b>$21</b><del>$28.77</del>
+                        </a></li>
+                      <li><a class="dropdown-item" href="#">
+                          250 g
+                          <p>24% OFF</p> <b>$11.45</b><del>$15.07</del>
+                        </a></li>
+                      <li><a class="dropdown-item active" href="#">
+                          1 Kg
+                          <p>24% OFF</p> <b>$83.29</b><del>$109.59</del>
+                        </a></li>
+                      <li><a class="dropdown-item" href="#">
+                          3 Kg
+                        </a></li>
+                      <li>
+                        <hr class="dropdown-divider">
+                      </li>
+                    </ul>
+                  </li>
+                </ul>
+              </div>
+              <div class="card-footer mx-auto w-100">
+                <button class="btn btn-secondary ms-2" type="button" data-bs-toggle="tooltip" data-bs-placement="bottom"
+                  data-bs-title="Save for Later"><i class="fa-regular fa-bookmark"></i></button>
+                <button class="btn btn-outline-danger ps-5 pe-5 w-75">Add</button>
+              </div>
+            </div>
+          </div>
+          <!-- 3.cauliflower -->
+          <div class="col-3">
+            <div class="card">
+              <a href="#">
+                <span class="bg-success rounded-end text-white fixed left p-3">42% OFF</span>
+                <img src="media/cauliflower.jpg" alt="my-image" width="80%" class="p-3 ms-4 rounded"
+                  title="fresho! cauliflower 1 pc (approx. 400 to 600g)">
+              </a>
+              <div class="card-header text-center">
+                <p class="text-warning text-start">fresho!</p>
+              </div>
+              <div class="card-body">
+                <h5 class="card-title">cauliflower</h5>
+                <ul class="me-auto mb-2 mb-lg-0" type="none">
+                  <li class="dropdown">
+                    <a class="dropdown-toggle text-decoration-none text-dark border border-light-subtle ps-5 pe-5" href="#" role="button"
+                      data-bs-toggle="dropdown" aria-expanded="false">
+                      1 PC
+                    </a>
+                    <ul class="dropdown-menu">
+                      <li class="border-secondary"><a class="dropdown-item" href="#">
+                          500 g
+                          <p>27% OFF</p> <b>$21</b><del>$28.77</del>
+                        </a></li>
+                      <li><a class="dropdown-item" href="#">
+                          250 g
+                          <p>24% OFF</p> <b>$11.45</b><del>$15.07</del>
+                        </a></li>
+                      <li><a class="dropdown-item active" href="#">
+                          1 Kg
+                          <p>24% OFF</p> <b>$83.29</b><del>$109.59</del>
+                        </a></li>
+                      <li><a class="dropdown-item" href="#">
+                          3 Kg
+                        </a></li>
+                      <li>
+                        <hr class="dropdown-divider">
+                      </li>
+                    </ul>
+                  </li>
+                </ul>
+              </div>
+              <div class="card-footer mx-auto w-100">
+                <button class="btn btn-secondary ms-2" type="button" data-bs-toggle="tooltip" data-bs-placement="bottom"
+                  data-bs-title="Save for Later"><i class="fa-regular fa-bookmark"></i></button>
+                <button class="btn btn-outline-danger ps-5 pe-5 w-75">Add</button>
+              </div>
+            </div>
+          </div>
+          <!-- 4.coriander -->
+          <div class="col-3">
+            <div class="card">
+              <a href="#">
+                <span class="bg-success rounded-end text-white fixed left p-3">24% OFF</span>
+                <img src="media/coriander-leaves.jpg" alt="my-image" width="80%" class="p-3 ms-4 rounded"
+                  title="fresho! coriander-leaves 1 kg">
+              </a>
+              <div class="card-header text-center">
+                <p class="text-warning text-start">fresho!</p>
+              </div>
+              <div class="card-body">
+                <h5 class="card-title">coriander-leaves</h5>
+                <ul class="me-auto mb-2 mb-lg-0" type="none">
+                  <li class="dropdown">
+                    <a class="dropdown-toggle text-decoration-none text-dark border border-light-subtle ps-5 pe-5" href="#" role="button" data-bs-toggle="dropdown"
+                      aria-expanded="false">
+                      1 Kg
+                    </a>
+                    <ul class="dropdown-menu">
+                      <li class="border-secondary"><a class="dropdown-item" href="#">
+                          500 g
+                          <p>27% OFF</p> <b>$21</b><del>$28.77</del>
+                        </a></li>
+                      <li><a class="dropdown-item" href="#">
+                          250 g
+                          <p>24% OFF</p> <b>$11.45</b><del>$15.07</del>
+                        </a></li>
+                      <li><a class="dropdown-item active" href="#">
+                          1 Kg
+                          <p>24% OFF</p> <b>$83.29</b><del>$109.59</del>
+                        </a></li>
+                      <li><a class="dropdown-item" href="#">
+                          3 Kg
+                        </a></li>
+                      <li>
+                        <hr class="dropdown-divider">
+                      </li>
+                    </ul>
+                  </li>
+                </ul>
+              </div>
+              <div class="card-footer mx-auto w-100">
+                <button class="btn btn-secondary ms-2" type="button" data-bs-toggle="tooltip" data-bs-placement="bottom"
+                  data-bs-title="Save for Later"><i class="fa-regular fa-bookmark"></i></button>
+                <button class="btn btn-outline-danger ps-5 pe-5 w-75">Add</button>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- best sellers -->
+      <div class="container mt-4 p-2 bg-secondary bg-opacity-25 text-black">
+        <div class="row">
+          <div class="col-10">
+            <h4 class="text-black text-start">Best Sellers</h4>
+          </div>
+          <div class="col">
+              <a href="#" class="text-secondary fs-6 me-2">Show More</a>
+              <button type="button" class="btn btn-light disabled"><a href="#"><i class="fa-solid fa-chevron-left text-secondary"></i></a></button>
+              <button type="button" class="btn btn-light"><a href="#"><i class="fa-solid fa-chevron-right text-secondary"></i></a></button>
+            </div>
+          </div>
+        
+        <div class="row">
+          <div class="col-3 p-2">
+            <div class="card">
+              <a href="#">
+                <span class="bg-success rounded-end text-white fixed left p-3">48% OFF</span>
+                <img src="media/1224873_1-littles-baby-wipes-with-aloe-vera-jojoba-oil-vitamin-e.jpg" alt="my-image"
+                  width="80%" class="p-3 ms-4 rounded"
+                  title="Baby Wipes - With Aloe Vera, Jojoba Oil & Vitamin E 5x80 pcs - Multipack">
+              </a>
+              <div class="card-header text-center">
+                <p class="text-warning text-start">Littles</p>
+              </div>
+              <div class="card-body">
+                <h5 class="card-title">Baby Wipes - With Aloe Vera, Jojoba Oil & Vitamin E</h5>
+                <ul class="me-auto mb-2 mb-lg-0" type="none">
+                  <li class="dropdown">
+                    <a class="dropdown-toggle text-decoration-none text-dark border border-light-subtle ps-5 pe-5 rounded" href="#" role="button" data-bs-toggle="dropdown"
+                      aria-expanded="false">
+                      5x80 pcs - Multipack
+                    </a>
+                    <ul class="dropdown-menu">
+                      <li class="border-secondary"><a class="dropdown-item" href="#">
+                          500 g
+                          <p>27% OFF</p> <b>$21</b><del>$28.77</del>
+                        </a></li>
+                      <li><a class="dropdown-item" href="#">
+                          250 g
+                          <p>24% OFF</p> <b>$11.45</b><del>$15.07</del>
+                        </a></li>
+                      <li><a class="dropdown-item active" href="#">
+                          1 Kg
+                          <p>24% OFF</p> <b>$83.29</b><del>$109.59</del>
+                        </a></li>
+                      <li><a class="dropdown-item" href="#">
+                          3 Kg
+                        </a></li>
+                      <li>
+                        <hr class="dropdown-divider">
+                      </li>
+                    </ul>
+                  </li>
+                </ul>
+                <p><b>₹495</b><del> ₹950</del></p>
+              </div>
+              <div class="card-footer mx-auto w-100">
+                <button class="btn btn-secondary ms-2" type="button" data-bs-toggle="tooltip" data-bs-placement="bottom"
+                  data-bs-title="Save for Later"><i class="fa-regular fa-bookmark"></i></button>
+                <button class="btn btn-outline-danger ps-5 pe-5 w-75">Add</button>
+              </div>
+            </div>
+          </div>
+          <div class="col-3 p-2">
+            <div class="card">
+              <a href="#">
+                <span class="bg-success rounded-end text-white fixed left p-3">40% OFF</span>
+                <img src="media/1201456_3-bigbasket-baby-wipes-fresh-no-paraben-double-moisturizing.jpg" alt="my-image"
+                  width="80%" class="p-3 ms-4 rounded" title="Baby wipes fresh No Paraben">
+              </a>
+              <div class="card-header text-center">
+                <p class="text-warning text-start">Bigbasket</p>
+              </div>
+              <div class="card-body">
+                <h5 class="card-title">Baby Wipes - Fresh, No Paraben, Double</h5>
+                <ul class="me-auto mb-2 mb-lg-0" type="none">
+                  <li class="dropdown">
+                    <a class="dropdown-toggle text-decoration-none text-dark border border-light-subtle ps-5 pe-5 rounded" href="#" role="button" data-bs-toggle="dropdown"
+                      aria-expanded="false">
+                      2x80 pcs - Multipack
+                    </a>
+                    <ul class="dropdown-menu">
+                      <li class="border-secondary"><a class="dropdown-item" href="#">
+                          500 g
+                          <p>27% OFF</p> <b>$21</b><del>$28.77</del>
+                        </a></li>
+                      <li><a class="dropdown-item" href="#">
+                          250 g
+                          <p>24% OFF</p> <b>$11.45</b><del>$15.07</del>
+                        </a></li>
+                      <li><a class="dropdown-item active" href="#">
+                          1 Kg
+                          <p>24% OFF</p> <b>$83.29</b><del>$109.59</del>
+                        </a></li>
+                      <li><a class="dropdown-item" href="#">
+                          3 Kg
+                        </a></li>
+                      <li>
+                        <hr class="dropdown-divider">
+                      </li>
+                    </ul>
+                  </li>
+                </ul>
+                <p><b>₹218</b><del> ₹398</del></p>
+              </div>
+              <div class="card-footer mx-auto w-100">
+                <button class="btn btn-secondary ms-2" type="button" data-bs-toggle="tooltip" data-bs-placement="bottom"
+                  data-bs-title="Save for Later"><i class="fa-regular fa-bookmark"></i></button>
+                <button class="btn btn-outline-danger ps-5 pe-5 w-75">Add</button>
+              </div>
+            </div>
+          </div>
+          <!-- pampers -->
+          <div class="col-3 p-2">
+            <div class="card">
+              <a href="#">
+                <span class="bg-success rounded-end text-white fixed left p-3">50% OFF</span>
+                <img src="media/40202339_4-pampers-baby-wipes-with-aloe.jpg" alt="my-image" width="80%"
+                  class="p-3 ms-4 rounded" title="Pampers Baby Wipes">
+              </a>
+              <div class="card-header text-center">
+                <p class="text-warning text-start">Pampers</p>
+              </div>
+              <div class="card-body">
+                <h5 class="card-title">Baby Wipes - with Aloe Vera Pampers</h5>
+                <ul class="me-auto mb-2 mb-lg-0" type="none">
+                  <li class="dropdown">
+                    <a class="dropdown-toggle text-decoration-none text-dark border border-light-subtle ps-5 pe-5 rounded" href="#" role="button" data-bs-toggle="dropdown"
+                      aria-expanded="false">
+                      72 PC -(Pack of 2)
+                    </a>
+                    <ul class="dropdown-menu">
+                      <li class="border-secondary"><a class="dropdown-item" href="#">
+                          500 g
+                          <p>27% OFF</p> <b>$21</b><del>$28.77</del>
+                        </a></li>
+                      <li><a class="dropdown-item" href="#">
+                          250 g
+                          <p>24% OFF</p> <b>$11.45</b><del>$15.07</del>
+                        </a></li>
+                      <li><a class="dropdown-item active" href="#">
+                          1 Kg
+                          <p>24% OFF</p> <b>$83.29</b><del>$109.59</del>
+                        </a></li>
+                      <li><a class="dropdown-item" href="#">
+                          3 Kg
+                        </a></li>
+                      <li>
+                        <hr class="dropdown-divider">
+                      </li>
+                    </ul>
+                  </li>
+                </ul>
+                <p><b>₹348.6</b><del> ₹498</del></p>
+              </div>
+              <div class="card-footer mx-auto w-100">
+                <button class="btn btn-secondary ms-2" type="button" data-bs-toggle="tooltip" data-bs-placement="bottom"
+                  data-bs-title="Save for Later"><i class="fa-regular fa-bookmark"></i></button>
+                <button class="btn btn-outline-danger ps-5 pe-5 w-75">Add</button>
+              </div>
+            </div>
+          </div>
+          <!-- johnson's -->
+          <div class="col-3 p-2">
+            <div class="card">
+              <a href="#">
+                <span class="bg-success rounded-end text-white fixed left p-3">45% OFF</span>
+                <img src="media/40054348_8-johnsons-baby-baby-skincare-wipes-super-saver-pack.jpg" alt="my-image"
+                  width="80%" class="p-3 ms-4 rounded" title="Johnson's baby skin care wipes 72 pcs">
+              </a>
+              <div class="card-header text-center">
+                <p class="text-warning text-start">Johnson's baby</p>
+              </div>
+              <div class="card-body">
+                <h5 class="card-title">Baby Skincare Wipes - Super Saver Pack</h5>
+                <ul class="me-auto mb-2 mb-lg-0" type="none">
+                  <li class="dropdown">
+                    <a class="dropdown-toggle text-decoration-none text-dark border border-light-subtle ps-5 pe-5 rounded" href="#" role="button"
+                      data-bs-toggle="dropdown" aria-expanded="false">
+                      1 PC
+                    </a>
+                    <ul class="dropdown-menu">
+                      <li class="border-secondary"><a class="dropdown-item" href="#">
+                          500 g
+                          <p>27% OFF</p> <b>$21</b><del>$28.77</del>
+                        </a></li>
+                      <li><a class="dropdown-item" href="#">
+                          250 g
+                          <p>24% OFF</p> <b>$11.45</b><del>$15.07</del>
+                        </a></li>
+                      <li><a class="dropdown-item active" href="#">
+                          1 Kg
+                          <p>24% OFF</p> <b>$83.29</b><del>$109.59</del>
+                        </a></li>
+                      <li><a class="dropdown-item" href="#">
+                          3 Kg
+                        </a></li>
+                      <li>
+                        <hr class="dropdown-divider">
+                      </li>
+                    </ul>
+                  </li>
+                </ul>
+                <p><b>₹225</b><del> ₹450</del></p>
+              </div>
+              <div class="card-footer mx-auto w-100">
+                <button class="btn btn-secondary ms-2" type="button" data-bs-toggle="tooltip" data-bs-placement="bottom"
+                  data-bs-title="Save for Later"><i class="fa-regular fa-bookmark"></i></button>
+                <button class="btn btn-outline-danger ps-5 pe-5 w-75">Add</button>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- top offers -->
+      <div class="container bg-body-teritory mt-4">
+        <h5>Top Offer</h5>
+        <div class="row">
+          <div class="col">
+            <a href="#">
+              <img src="media/deals-of-the-day.jpg" alt="" title="Top Offer" style="width: 95%;"
+                class="rounded shadow-lg">
+            </a>
+          </div>
+          <div class="col">
+            <a href="#">
+              <img src="media/big-pack-big-deals.jpg" alt="" title="Top Offer" style="width: 95%;"
+                class="rounded shadow-lg">
+            </a>
+          </div>
+          <div class="col">
+            <a href="#">
+              <img src="media/combos-cant-miss.jpg" alt="" title="Top Offer" style="width: 95%;"
+                class="rounded shadow-lg">
+            </a>
+          </div>
+          <div class="col">
+            <a href="#">
+              <img src="media/the-30rupees-off.jpg" alt="" title="Top Offer" style="width: 95%;"
+                class="rounded shadow-lg">
+            </a>
+          </div>
+        </div>
+      </div>
+
+      <!-- fruits and vegetables -->
+      <div class="container mt-4">
+        <h5>Fruits and Vegetables</h5>
+        <div class="row">
+          <div class="col">
+            <a href="#">
+              <img src="media/fresh-vegetables.jpg" alt="" title="Fruits and Vegetables" style="width: 95%;"
+                class="rounded shadow-lg">
+            </a>
+          </div>
+          <div class="col">
+            <a href="#">
+              <img src="media/fresh-fruits.jpg" alt="" title="Fruits and Vegetables" style="width: 95%;"
+                class="rounded shadow-lg">
+            </a>
+          </div>
+          <div class="col">
+            <a href="#">
+              <img src="media/cuts-exotics.jpg" alt="" title="Fruits and Vegetables" style="width: 95%;"
+                class="rounded shadow-lg">
+            </a>
+          </div>
+          <div class="col">
+            <a href="#">
+              <img src="media/herbs-seasoning.jpg" alt="" title="Fruits and Vegetables" style="width: 95%;"
+                class="rounded shadow-lg">
+            </a>
+          </div>
+        </div>
+      </div>
+
+      <!-- your daily staples -->
+      <div class="container mt-3">
+        <h5>Your Daily Staples</h5>
+        <div class="row">
+          <div class="col">
+            <a href="#">
+              <img src="media/atta-flour.jpg" alt="" title="your daily staples" style="width:100%" class="rounded">
+            </a>
+          </div>
+          <div class="col">
+            <a href="#">
+              <img src="media/rice-products.jpg" alt="" title="your daily staples" style="width:100%">
+            </a>
+          </div>
+          <div class="col">
+            <a href="#">
+              <img src="media/dals-pulse.jpg" alt="" title="your daily staples" style="width:100%">
+            </a>
+          </div>
+          <div class="col">
+            <a href="#">
+              <img src="media/cooking-oils.jpg" alt="" title="your daily staples" style="width:100%">
+            </a>
+          </div>
+          <div class="col">
+            <a href="#">
+              <img src="media/dry-fruits.jpg" alt="" title="your daily staples" style="width:100%">
+            </a>
+          </div>
+          <div class="col">
+            <a href="#">
+              <img src="media/salt-sugar.jpg" alt="" title="your daily staples" style="width:100%">
+            </a>
+          </div>
+        </div>
+      </div>
+
+      <!-- beverages -->
+      <div class="container mt-2">
+        <h5>Beverages</h5>
+        <div class="row">
+          <div class="col">
+            <a href="#">
+              <img src="media/health-drinks.jpg" alt="" title="beverages" style="width:100%" class="rounded">
+            </a>
+          </div>
+          <div class="col">
+            <a href="#">
+              <img src="media/tea-coffee.jpg" alt="" title="beverages" style="width:100%" class="rounded">
+            </a>
+          </div>
+          <div class="col">
+            <img src="media/flavoured-soyamilk.jpg" alt="" title="beverages" style="width:100%" class="rounded">
+          </div>
+          <div class="col">
+            <a href="#">
+              <img src="media/juices.jpg" alt="" title="beverages" style="width:100%" class="rounded">
+            </a>
+          </div>
+          <div class="col">
+            <a href="#">
+              <img src="media/energy-drinks.jpg" alt="" title="beverages" style="width:100%" class="rounded">
+            </a>
+          </div>
+          <div class="col">
+            <a href="#">
+              <img src="media/soft-drinks.jpg" alt="" title="beverages" style="width:100%" class="rounded">
+            </a>
+          </div>
+        </div>
+      </div>
+
+      <!-- snacks store -->
+      <div class="container bg-body-teritory mt-4">
+        <h5 class="">Snacks Store</h5>
+        <div class="row">
+          <div class="col">
+            <a href="#">
+              <img src="media/chai-time-snack.jpg" alt="" title="Snacks Store" style="width: 95%;"
+                class="rounded shadow-lg">
+            </a>
+          </div>
+          <div class="col">
+            <a href="#">
+              <img src="media/morning-starters.jpg" alt="" title="Snacks Store" style="width: 95%;"
+                class="rounded shadow-lg">
+            </a>
+          </div>
+          <div class="col">
+            <a href="#">
+              <img src="media/pasta-sauce.jpg" alt="" title="Snacks Store" style="width: 95%;"
+                class="rounded shadow-lg">
+            </a>
+          </div>
+          <div class="col">
+            <a href="#">
+              <img src="media/sweet-cravings.jpg" alt="" title="Snacks Store" style="width: 95%;"
+                class="rounded shadow-lg">
+            </a>
+          </div>
+        </div>
+      </div>
+
+      <!-- cleaning and household -->
+      <div class="container bg-body-teritory mt-4">
+        <h5>Cleaning & Household</h5>
+        <div class="row">
+          <div class="col">
+            <a href="#">
+              <img src="media/cleaners.jpg" alt="" title="Cleaning & Household" style="width: 95%;"
+                class="rounded shadow-lg">
+            </a>
+          </div>
+          <div class="col">
+            <a href="#">
+              <img src="media/detergents.jpg" alt="" title="Cleaning & Household" style="width: 95%;"
+                class="rounded shadow-lg">
+            </a>
+          </div>
+          <div class="col">
+            <a href="#">
+              <img src="media/disposible.jpg" alt="" title="Cleaning & Household" style="width: 95%;"
+                class="rounded shadow-lg">
+            </a>
+          </div>
+          <div class="col">
+            <a href="#">
+              <img src="media/freshners.jpg" alt="" title="Cleaning & Household" style="width: 95%;"
+                class="rounded shadow-lg">
+            </a>
+          </div>
+        </div>
+      </div>
+
+      <!-- beauty and hygiene -->
+      <div class="container mt-3">
+        <h5>Beauty and Hygiene</h5>
+        <div class="row">
+          <div class="col">
+            <a href="#">
+              <img src="media/makeup-show-stopper.jpg" alt="" title="beauty and hygiene" style="width:100%"
+                class="rounded">
+            </a>
+          </div>
+          <div class="col">
+            <a href="#">
+              <img src="media/moisturiser.jpg" alt="" title="beauty and hygiene" style="width:100%">
+            </a>
+          </div>
+          <div class="col">
+            <a href="#">
+              <img src="media/perfumes.jpg" alt="" title="beauty and hygiene" style="width:100%">
+            </a>
+          </div>
+          <div class="col">
+            <a href="#">
+              <img src="media/shaving-creame.jpg" alt="" title="beauty and hygiene" style="width:100%">
+            </a>
+          </div>
+          <div class="col">
+            <a href="#">
+              <img src="media/minimum-30-off.jpg" alt="" title="beauty and hygiene" style="width:100%">
+            </a>
+          </div>
+          <div class="col">
+            <a href="#">
+              <img src="media/big-pack-blogger.jpg" alt="" title="beauty and hygiene" style="width:100%">
+            </a>
+          </div>
+        </div>
+      </div>
+      <!-- home and kitchen -->
+      <div class="container mt-3">
+        <h5>Home and Kitchen</h5>
+        <div class="row">
+          <div class="col">
+            <a href="#">
+              <img src="media/under99.jpg" alt="" title="home and kitchen" style="width:100%" class="rounded">
+            </a>
+          </div>
+          <div class="col">
+            <a href="#">
+              <img src="media/100-199.jpg" alt="" title="home and kitchen" style="width:100%">
+            </a>
+          </div>
+          <div class="col">
+            <a href="#">
+              <img src="media/pressure-cooker.jpg" alt="" title="home and kitchen" style="width:100%">
+            </a>
+          </div>
+          <div class="col">
+            <a href="#">
+              <img src="media/stationary-store.jpg" alt="" title="home and kitchen" style="width:100%">
+            </a>
+          </div>
+          <div class="col">
+            <a href="#">
+              <img src="media/storage-containers.jpg" alt="" title="your daily staples" style="width:100%">
+            </a>
+          </div>
+          <div class="col">
+            <a href="#">
+              <img src="media/cleaning-essentials.jpg" alt="" title="home and kitchen" style="width:100%">
+            </a>
+          </div>
+        </div>
+      </div>
+
+         <!-- carousel-bottom -->
+         <div class="container mt-4">
+          <div id="cardCarousel" class="carousel slide" data-bs-ride="carousel" data-bs-interval="2000">
+            <!-- indicators -->
+            <div class="carousel-indicators bg-secondary bg-opacity-75 rounded-3 di">
+              <button class="active btnc pt-2 pb-2" type="button" data-bs-target="#cardCarousel" data-bs-slide-to="0" aria-current="true"
+                aria-label="Slide1"></button>
+              <button class="btnc pt-2 pb-2" type="button" data-bs-target="#cardCarousel" data-bs-slide-to="1" aria-label="Slide2"></button>
+              <button class="btnc pt-2 pb-2" type="button" data-bs-target="#cardCarousel" data-bs-slide-to="2" aria-label="Slide3"></button>
+              <button class="btnc pt-2 pb-2" type="button" data-bs-target="#cardCarousel" data-bs-slide-to="3" aria-label="Slide4"></button>
+  
+            </div>
+            <div class="carousel-inner rounded-3">
+              <div class="carousel-item active">
+                <div class="card">
+                  <img src="media/carb1.jpg" class="" alt="Card 1">
+                  <div class="card-body">
+                  </div>
+                </div>
+              </div>
+              <div class="carousel-item">
+                <div class="card">
+                  <img src="media/carb2.jpg" class="" alt="Card 2">
+                  <div class="card-body">
+                  </div>
+                </div>
+              </div>
+              <div class="carousel-item">
+                <div class="card">
+                  <img src="media/carb3.jpg" class="" alt="Card 3">
+                  <div class="card-body">
+                  </div>
+                </div>
+              </div>
+              <div class="carousel-item">
+                <div class="card">
+                  <img src="media/carb4.jpg" class="" alt="Card 2">
+                  <div class="card-body">
+                  </div>
+                </div>
+              </div>
+            </div>
+  
+            <!-- Optional: Controls for Previous and Next -->
+            <button class="carousel-control-prev bg-black bi" type="button" data-bs-target="#cardCarousel"
+              data-bs-slide="prev">
+              <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+              <span class="visually-hidden">Previous</span>
+            </button>
+            <button class="carousel-control-next bg-black bi2" type="button" data-bs-target="#cardCarousel"
+              data-bs-slide="next">
+              <span class="carousel-control-next-icon" aria-hidden="true"></span>
+              <span class="visually-hidden">Next</span>
+            </button>
+          </div>
+        </div>
+
+      <!-- bigbasket - online grocery store -->
+      <div class="container bg-light mt-3">
+        <h6>bigbasket - online grocery store</h6>
+        <p class="fw-6">
+          Did you ever imagine that the freshest of fruits and vegetables, top-quality pulses and food grains, dairy
+          products, and hundreds of branded items could be handpicked and delivered to your home, all at the click of a
+          button? In today's fast-paced world, bigbasket.com, India's pioneering online grocery store, continues to
+          bring a
+          staggering array of over 40,000 products from more than 1,000 brands to the doorsteps of over 10 million
+          satisfied
+          customers. From essential household cleaning products to the latest beauty and makeup trends, bigbasket
+          remains
+          your one-stop shop for daily needs. <br><br>
+
+
+          In these times, we've eliminated the stress associated with shopping for daily essentials. You can now
+          effortlessly order all your household products and groceries online. Plus, the added convenience of finding
+          all
+          your requirements at a single source, coupled with substantial savings, demonstrates that bigbasket, India's
+          largest online supermarket, has transformed the way we shop for groceries. Online grocery shopping has become
+          second nature. And when it comes to freshness, whether it's fruits and vegetables or dairy and meat, we've got
+          you
+          covered! Easily obtain fresh eggs, meat, fish, and more with just a few clicks. <br><br>
+
+          We now serve 300+ cities and towns across India and ensure swift delivery times, guaranteeing that all your
+          groceries, snacks and branded foods reach you on time. <br> <br>
+
+
+          Slotted Delivery: Choose the most convenient delivery slot to receive your groceries, ranging from early
+          morning
+          delivery for early birds to late-night delivery for those on the night shift. bigbasket caters to every
+          schedule. <br><br>
+
+
+          Instant delivery from bbnow: In response to the ever-increasing demand for convenience, bbnow by bigbasket
+          offers
+          lightning-fast grocery delivery, ensuring that your essentials are at your doorstep within 15-30 minutes. Our
+          quick delivery service has revolutionized the way you shop for groceries. Choose from 5000+ grocery
+          essentials.
+          bbnow is available only in select cities. <br><br>
+
+
+          Whether it's a last-minute dinner party or you simply need something urgently, we've got you covered. This
+          service
+          exemplifies our commitment to providing you with not just the widest range of products but also the fastest
+          and
+          most efficient shopping experience, making bigbasket.com the go-to destination for all your immediate grocery
+          needs. <br><br>
+        </p>
+      </div>
+  </main>
+
+  <!-- footer -->
+  <footer class="bg-black text-white">
+    <div class="container">
+      <div class="row">
+        <div class="col">
+          <ul type="none">
+            <h6 class="mt-4">Bigbasket</h6>
+            <li><a href="#" class="text-underline-hover text-light fw-light">About Us</a></li>
+            <li><a href="#" class="text-underline-hover text-light fw-light">Become A bigbasket Rider</a></li>
+            <li><a href="#" class="text-underline-hover text-light fw-light">In News</a></li>
+            <li><a href="#" class="text-underline-hover text-light fw-light">Green bigbasket</a></li>
+            <li><a href="#" class="text-underline-hover text-light fw-light">Privacy Policy</a></li>
+            <li><a href="#" class="text-underline-hover text-light fw-light">Terms and Conditions</a></li>
+            <li><a href="#" class="text-underline-hover text-light fw-light">Careers At bigbasket</a></li>
+            <li><a href="#" class="text-underline-hover text-light fw-light">bb Instant</a></li>
+            <li><a href="#" class="text-underline-hover text-light fw-light">bb Daily</a></li>
+            <li><a href="#" class="text-underline-hover text-light fw-light">bb Blog</a></li>
+            <li><a href="#" class="text-underline-hover text-light fw-light">bbnow</a></li>
+          </ul>
+        </div>
+        <div class="col">
+          <ul type="none">
+            <h6 class="mt-4">Help</h6>
+            <li><a href="#" class="text-underline-hover text-light fw-light">FAQs</a></li>
+            <li><a href="#" class="text-underline-hover text-light fw-light">Contact Us</a></li>
+            <li><a href="#" class="text-underline-hover text-light fw-light">bb Wallet FAQs</a></li>
+            <li><a href="#" class="text-underline-hover text-light fw-light">bb Wallet T&Cs</a></li>
+            <li><a href="#" class="text-underline-hover text-light fw-light">Vendor Connect</a></li>
+          </ul>
+        </div>
+        <div class="col">
+          <img src="media/bigbasket.jpg" alt="" style="width: 208px; height: 100px;" class="mt-4 mb-4"> <br>
+          <a href="#">
+            <img src="media/google-play.png" style="width: 120px; height: 50px;" alt=""
+              class="border border-1 border-light rounded me-3">
+          </a>
+          <a href="#">
+            <img src="media/app-store.png" alt="" style="width: 120px; height: 50px;"
+              class="border border-1 border-light rounded">
+          </a>
+          <br> <br>
+          <span class="ms-3">
+            <a href="#" class="text-light text-decoration-none mt-2 me-4">
+              <i class="fa-brands fa-facebook h4"></i>
+            </a>
+            <a href="#" class="text-light text-decoration-none me-4">
+              <i class="fa-brands fa-instagram h4"></i>
+            </a>
+            <a href="#" class="text-light text-decoration-none me-4">
+              <i class="fa-brands fa-twitter h4"></i>
+            </a>
+            <a href="#" class="text-light text-decoration-none me-2">
+              <i class="fa-brands fa-pinterest h4"></i>
+            </a>
+          </span>
+        </div>
+      </div>
+      <hr class="dotted">
+    </div>
+
+    <div class="container">
+      <h6 class="text-center">Cities We Serve</h6>
+      <p>
+        Abohar|Abu Road|Achampet| Achrol|Adampur | Addanki | Addateegala | Adilabad | Adimali | Adoni | Adoor | Afzalpur
+        | Agali | AGARTALA | Agra | Ahmedabad-Gandhinagar | Aizawl | Ajeetgarh | Ajmer | Ajnala | Akaloor | Akbarpur |
+        Akbarpur-UP | Aklera | Akola | Alair | Alakode | Aland | Alappuzha | Aliganj | Aligarh | Aligarh District |
+        ALIPURDUAR | Alirajpur | Allagadda | Allahabad | Alleppey | Almora | ALNAVAR | Alote | Alur | Aluva | Alwar |
+        Amalapuram | Amangal | Amanganj | Amarapuram | Amaravathi | Amarpatan | Amarwara | Ambala | Ambasamudram | Ambuj
+        Nagar | Ambur | Amethi District | Amiliya | Amla | Amravati | Amreli | Amritsar | Amritsar | Amroha District |
+        Anand | Anandnagar | Anandpur Sahib | Anantapur District | Anantnag | Andaman and Nicobar | Angul | Angul |
+        Anjumoorthy | Ankleshwar | Ankola | Annur | Anpara | Anthiyour | Anuppur | Anupshahar | Aonla | Arakkonam |
+        Araku | Arambag | Arani | Araria | Areacode | Arimbur | Ariyalur | Armoor | ARRAH | Arsikere | Aruppukkottai |
+        ARWAL | Asansol | Ashok Nagar | Ashta | Asifabad | ASIKA | Asind | Assaigoli | ASTARANGA | Aswaraopeta | Atarra
+        | Athagad | Athani | Atmakur | Atmakur-AP | Atmakur-TS | Attingal | Attur | AUL | Aunrihar | Aurad | Auraiya |
+        Aurangabad | Aurangabad(BH) | Avanigadda | Avinashi | Ayodhya District | Ayoor | Azamgarh | Azhagappapuram | B
+        Kothakota | Babasagar | Baberu | Babrala | BABUJANG | BACHHRAWAN | BADAGADA | BADAMBA | Badami | Baddi |
+        Badlapur | Badnagar | Badnaur | Badvel | Bagalkot | Bagepalli | Bageshwar | Baghpat District | BAGNAN | Bagru |
+        Bagula | Bahadurgarh | Bahal | Baheri | BAHRAICH | BAIHATA | Baijnath-UK | Bailhongal | Bajag | Bajore | Bakewar
+        | Bakhtiarpur | Balaghat | Balangir | Balaran | Balasore | Balesar | Baleswar | Ballia | BALLIGUDA | Balotra |
+        BALRAMPUR | Balussery | BAMRA | Banda | Bandikui | Bangalore | Bangalore Rural | Bangana | Bangaon | Bangarmau |
+        Bangarpet | Banka | Bankapura | Bankura | Bansi | Banswada | Banswara | Bantwal | Bapatla | Barabanki District |
+        Barakar | Baran | Baraut | Bardhaman | Bardoli | Bareilly | Bareja | Bareli | Bargarh | Barh | Barhaj |
+        Barhalganj | Barhi | Bari Sadri | Baripada | Bariya | Barmer | Barnala | Barodia | BARPETA | Barwani |
+        Basavakalyan | Basavana Bagewadi | Basirhat | BASIRHAT | Bassi | BassiRJ | Bastar | Basti | Batala | Bathinda |
+        Bavla | Bayana | Beawar | Begowal | Begumganj | Begusarai | BEHRAMPUR | Bejjanki | Belgaum | Bellampalli |
+        Bellary | Belthangady | Belur | BENIPATTI | BENIPUR | Beohari | Berachampa | Berasia | Berhampur | Berinag |
+        Betamcherla | Bethamangala | Bettiah | Betul | Bhadaur | Bhaderwah | Bhadohi | Bhadrachalam | Bhadradri
+        Kothagudem District | Bhadrak | Bhadrak District | BHAGALPUR | Bhagpat | Bhainsa | Bhalki | Bhandara | Bhangar |
+        BHANJANAGAR | Bhanpura | Bharuch | BHARWARA | Bhatewar | Bhathat | Bhatkal | Bhavnagar | Bhawani Mandi |
+        Bheemunipatnam | Bhilwara | Bhimadole | Bhimavaram | Bhimtal | Bhind | Bhinga | Bhinmal | Bhiwadi | Bhiwani |
+        Bhogapuram | Bhojpur | Bhojpur | Bhongir | Bhopal | Bhopal Rural | BHORE | BHUBAN | Bhubaneshwar-Cuttack |
+        Bhubaneswar Rural | Bhupalpally | Bhuvanagiri | Bichhiya | Bidar District | Bidhuna | Bihar Sharif | Bihta |
+        Bijainagar | Bijapur | BIJNOR | Bijpur | Bikaner | Bikkavolu | Bilara | Bilaspur(CGH) | Bilaspur-HP |
+        Bilaspur-HR | Bilaspur-UP | Bilimora | Billawar | Bina | Binaganj | Birbhum | BIRPARA | Bisalpur | Bishnupur |
+        Boath Buzurg | Bobbili | Bodhan | BOKAKHAT | Bokaro | Bolpur | Bonakal | BONGAIGAON | BONGAON | Bonli | Borsad |
+        Botad | Boudh | BRAHMAPUR | BRAJRAJNAGAR | Brijmanganj | Budaun | Buhana | Bulandshahr | Bulandshahr District |
+        Bundi | Burhanpur | Butibori | Buxar | Byadagi | Byadgi | Byndoor | Cachar | Canning | Chagalamarri | ChakiaUP |
+        Chaklasi | Chaksu | Chalakudy | Challakere | Chamarajanagar | Chameli | Chamoli | Champhai | CHANDANKIYARI |
+        Chandauli | Chandausi | CHANDBALI | Chanderi | Chandigarh Tricity | CHANDIKHOL | Chandpur | Chandrapur | Chandur
+        Bazar | Changanacherry | Changlang | Channagiri | Channapatna | Channarayapatna | Channarayapattana | Charkhi
+        Dadri | Chatra | Chaumahla | Chavassery | Chengannur | Chennai | Chennai Rural | Cherial | CHERLA |
+        Cherpulassery | Chetpet | Cheyyar | CHHAPRA | Chhatarpur | CHHENDIPADA | Chhibramau | Chhindwara | Chhoti Sadri
+        | Chhutmalpur | CHIKITI | Chikkaballapura District | Chikkamagalur | Chikkanayakanahalli | Chikodi |
+        Chilakaluripet | Chimakurthy | Chincholi | Chingavanam | Chinhat | Chinnasalem | Chinnur | Chintalpudi |
+        Chintamani | Chintapalli | Chintoor | Chintpurni | Chirala | Chiramanangad | Chirgaon | Chitradurga | Chitrakoot
+        | Chittapur | Chittaranjan | Chittaurgarh | Chittoor District | Chittor District | Chodavaram | Cholapur | Chomu
+        | Chopan | Choppadandi | Chotila | Choutuppal | chungatra | Chunnar | Churu | Cochin | Coimbatore | Coimbatore
+        Rural | Colonejganj | COOCHBEHAR | Coonoor | Cuddalore | Cuddapah | Cumbum | CumbumAP | Cuttack | Dabaspete |
+        Dabra | Dadri | Dahegam | Dahegaon | Dalhousie | Daman | Damoh | Dandeli | Dantewada | Danthalapally | Darbhanga
+        | Dariyabad | Darjiling | Darrang | Daryapur Banosa | DASPALLA | Dasuya | Dataganj | Dausa | Davangere |
+        Debagarh | Deesa | Degana | DehraDun | Delhi | Denkanikottai | DeogarhRJ | Deoghar | Deoli-RJ | Deoria | Deosar
+        | Deotalab | Dera Bassi | Devadurga | Devarakonda | Dewas | DHAKA | DHAKUAKHANA | Dhalai | Dhamnod | Dhampur |
+        Dhamtari | Dhanbad | Dhandhuka | Dhanghata | Dhar | Dharamkot | Dharampur | Dharapuram | Dharchula | Dhariyawad
+        | Dharmapuri-TS | Dharwad | Dhaurahara | Dhemaji | Dhenkanal | DHOLI | Dholka | Dholpur | Dhone | Dhubri | Dhuri
+        | Dibai | DIBRUGARH | Didihat | Didwana | DIGAPAHANDI | DIGBOI | Dildar Nagar | Dimapur | Dinanagar | DINARA |
+        Dindigul | DINHATA | Doddaballapura | Doiwala | Domariyaganj | DOOMDOOMA | Doranala | Dostpur | Draksharamam |
+        Dudhinagar | Dudu | Dulchehra | DULIAJAN | Dullahpur | Dumka | Dumraon | Dungarpur | Durg | Dwarahat | Dwaraka
+        Tirumala | East Champaran | East Garo Hills | East Godavari District | East Kameng | East Khasi Hills | East
+        Midnapore | East Siang | East Sikkim | East Singhbhum | East-Godavari-2 | Edappal | Edavanna | Eedu | EKMA |
+        Eluru | Eral | Erode | Etah | Etawah | Ezhupunna | Faizabad | Falna | Faridabad | Faridkot | Faridpur |
+        Farrukhabad | Fatehabad | Fatehgarh | Fatehgarh Sahib District | Fatehnagar | Fatehpur | Fatehpur-RJ | Fazilka |
+        Firozabad | Firozpur | Gadag | Gadarwara | Gadwal | Gahmar | Gairsain | Gajapati | Gajapatinagaram | Gajraula |
+        Galiveedu | GALLERI | Ganga Nagar | Gangapur City | Gangapur-RJ | Gangavathi | Ganj Basoda | Ganjam | Ganjam |
+        Ganjdundwara | Gannavaram | Garhshanker | Garhwa | Gariaband | Garividi | GARJANPUR | Garkha | Garoth |
+        Gauribidanur | Gautam Buddha Nagar District | Gaya | Gaya | Ghanpur | Ghansali | Gharsana | Ghatampur | Ghati
+        Billan | Ghator | Ghaziabad | Ghazipur | Ghosi | Ghughus | Ghugri | Ghumarwin | Giddarbaha | Giridh | Goa |
+        Goalpara | Gobichettipalayam | Godda | Godhra | GOGAMUKH | Gogunda | Gohana | Gokak | Gokavaram | GOLAGHAT |
+        Gonda District | Gondia | Gonikoppal | Gooty | GOPALAPUR | Gopalganj | Gopalganj | GOPALNAGAR | Gopiganj |
+        Gorakhpur | Gorantla | Gotan | Gudalur | Gudivada | Gudiyatham | Gudiyattam | Gudur | Gudur-TS | Gulbaraga |
+        Gulbarga | GUMIA | Gumkhal | Gumla | Gummudipoondi | Guna | Gundlupet | Guntakal | Guntur | Guntur-Rural |
+        Gurdaspur | Gurgaon | Gurmatkal | Gursahaiganj | Gurugram Rural | Guruvayoor | Guskhara | Guwahati | Guwahati
+        Rural | Gwalior | Habra | Hagaribommanahalli | Haidargarh | Hailakandi | HAJIPUR | Hajipur | Haldia | Haldwani |
+        Halflong | Haliyal | Hamirpur | Hamirpur-UP | Hanamkonda | Hangal | Hansi | HANSKHALI | Hanskhali | Hanumangarh
+        | Hanur | Hapur | Harda | Hardoi | Haridwar | Harihara | Haripad | Haripal | Haripurdhar | Harpanahalli | Harur
+        | Haryana | HARYANA_3PL | Hasanpur | Hasnabad | Hassan | Hathras | Hatta | Haveri | Hayathnagar | Hazaribag |
+        HELENCHA | Herbertpur | HILSA | Himachal Pradesh | HIMACHAL PRADESH_3PL | Himatnagar | Hindaun | Hindupur |
+        HINGALGANJ | HINJILICUT | Hiranagar | Hirekerur | Hiriyur | Hisar | Holenarasipur | Honnali | Honnavar | Hooghly
+        | Hooghly District | Hoovina Hadagali | Hosadurga | Hosanagar | Hoshangabad | Hoshiarpur | Hospet | Hosur |
+        Howrah | Howrah | Hubli | Huliyar | Humnabad | Hunsur | Husnabad | Huzur Nagar | Huzurabad | Hyderabad |
+        Hyderabad Rural | Ichchapuram | Ichoda | Iddukki | Ikauna | ILIPUR | Ilkal | IMAMGANJ | Imphal West | Indi |
+        Indore | Indore Rural | Irinjalakuda | Itarsi | Itava | Itawa | Itia Thok | Jabalpur | Jadcherla | Jagaluru |
+        JAGANNATHPRASAD | Jagatsinghapur | Jagatsinghpur | JAGDISHPUR | JAGDISHPUR | Jagdishpur-UP | Jagraon | Jagtial |
+        Jahangirabad | Jahu | JAIGAON | Jainoor | Jaintia Hills | Jaipur | Jaipur Rural | Jaisalmer | Jaisinghnagar |
+        Jaitwara | Jajapur | Jajpur | Jakh | Jalalabad | Jalalpur | Jalalpur-UP | Jalandhar | Jalaun | Jalesar | Jalore
+        | JALPAIGURI | Jamkhandi | Jammikunta | JAMMU & KASHMIR_3PL | Jammu Kashmir | Jamshedpur | Jamtara | Jamui |
+        Jamuria | Jangaon | Jangareddygudem | Janjgir-champa | Jannaram | Jaora | Jashpur | Jatara | Jaunpur | Jawad |
+        Jayankondam | Jehanabad | Jehanabad | Jewar | Jewargi | Jhabua | Jhadol | Jhajjar | Jhalawar | JHANJHARPUR |
+        Jhansi | Jharsuguda | Jharsuguda | Jhunjhunu | Jhunku | Jiyanpur | Jodhpur | Joginder Nagar | Jogipet | JORHAT |
+        Joshimath | Jubbal | Jukhala | Junnardeo | Kadaba | Kadapa | Kadi | Kadiri | KADOBAHAL | Kadpadi | Kadur |
+        Kaghaznagar | Kaikaluru | Kaimur (Bhabua) | Kaithal | Kakinada | Kalaburagi | Kalahandi | Kalasa | Kalghatgi |
+        Kalinga Nagar | Kallakurichi | Kallikkad | Kalluru | Kalmeshwar | Kalna | Kalol | KalolHP | Kalpetta |
+        Kalwakurthy | Kalyandurg | KALYANI | KAMAKHYANAGAR | Kamareddy District | Kambadur | Kamptee | Kamrup |
+        Kanakapura | Kanchipuram | Kandhamal | Kandukur | Kangan | Kangeyam | Kangra | Kanigiri | Kanjarakatte |
+        Kanjiramattom | Kanker | Kannapuram | Kannauj | Kannur | Kanpur | Kanthi | Kapadvanj | Kapasan | Kaptanganj |
+        Kapurthala | Karaikal | Karaikudi | Karauli | Karbi Anglong | Karera-MP | Karim Nagar | Karimba | Karimganj |
+        Karimnagar | Karkala | Karnal | Karsog | Karukachal | Karur | Karwar | Kasaragod | Kasganj | Kashipur | Katangi
+        | Kathipudi | Kathua | Katihar | Katni | Katol | Kattappana | Katwa | Kauriram | Kavali | Kawardha | Kayamkulam
+        | Kazipet | Kekri | Kelwara | KENDRAPARA | Kendrapara | Kendujhar | Kerakat | Kerur | Kesali | Keshoraipatan |
+        Keylong | Khadda | Khagaria | Khairabad | Khajuraho | KHALARI-JR | Khalilabad | Khambhat | Khammam | Khanapur |
+        Khanapur-TS | Khandela | Khandwa | Khanna | Khanpur | Kharagpur | Khargone | Khatauli | Khategaon | Khatima |
+        Khatu Khurd | Kheda | Kheragarh | Khergam | Kheri | Kherwara | Khimsar | Khinwara | KHIZASARAI | KHODAGANJ |
+        Khorda | Khordha | KHUNTI | Khurai | Khutar | Kilimanoor | Kinnaur | Kiphire | Kishanganj | Kishangarh | Kishni
+        | Kittur | Kochi | Kochi Rural | Kodad | Kodaikanal | KODALA | Koderma | Kodumudi | Kodungallur | Koduru |
+        Kokrajhar | kolar | Kolasib | Kolayat | Kolhapur | Kolhar | Kolkata | Kolkata Rural | Kollam | Kollapur |
+        Kollegala | KONARK | Konaseema District | Konch | Kondapi | Koothattukulam | Koppal | Koraput | Koratagere |
+        Koratla | Korba | Koriya | Koruprolu | Kosgi | Kota | Kotagiri | Kotdwara | Kothagudem | Kothapalli | Kotkapura
+        | Kotma | Kotputli | Kottarakkara | Kottayam | Kotturu | Kotturu-AP | Kovilpatti | Kovvur | Kowthal | Koyilandy
+        | Koyyuru | Kozhenchery | Kozhikode | Krishna District | Krishnagiri | Krishnarajanagara | Krishnarajngr |
+        Krishnarajpet | KUCHAIKOTE | Kuchaman City | KUCHINDA | Kudair | Kudligi | Kukanoor | Kukshi | Kumarganj |
+        Kumbakonam | Kumily | Kumta | Kundapura | Kundli | Kunigal | Kuppam | Kurnool | Kurugodu | Kurukshetra | Kurupam
+        | Kushalnagar | Kushinagar | Kushtagi | Kusumanchi | Kuthumkal | Kuthuparamba | Kuttiady | Kuttikol | Ladakh |
+        Ladwa | Lahar | Lakheri | Lakhimpur | Lakhimpur | Lakhisarai | Lakhnadon | Laksar | Lal Gopalganj | Lalitpur |
+        Lalsot | Lambhua | Latehar | Lavkush Nagar | Lawngtlai | Laxmangarh | Laxmangarh-RJ | Linga | Lingasugur |
+        Lohaghat | Lohardaga | Lohit | Longleng | Lower Dibang Valley | Lower Subansiri | Lucknow | Lucknow Rural |
+        Ludhiana | Ludhiana | Ludhiana District | Lunawada | Lunglei | Lunkaransar | Luxettipet | Macherla | Machhiwara
+        | Machilipatnam | Madakasira | Madanapalle | Madanapalli | Madanpur | Maddur | Madgulapally | Madhepura |
+        Madhoganj | Madhubani | Madhubani | Madhugiri | MADHYA PRADESH_3PL | Madikeri | Madurai | Madwas | Magadi |
+        Mahabubabad | Mahabubnagar | Mahadevpur | Mahalingpur | Maharajapuram | MAHARAJGANJ-BH | Mahasamund | Mahe |
+        Mahendragarh-HR | Maheshwar | Mahoba | Maholi | Mahrauni | Mahwa | Maihar | Mainpuri | MAIRWA | Majhgawa |
+        MAKHDUMPUR | Makrana | Maksudangarh | Makthal | Malanjkhand | Malappuram | Malavalli | MALDA | Malerkotla |
+        Malhera | Malihabad | Malkangiri | Mallapur | Malmaliya | MALMALIYA | Malout | Malpura | Malsisar | Malur |
+        Mammit | Manali | Manamelkudi | Mananthavadi | Manasa | Manawar | Mancherial | Manda | Mandalgarh | Mandapeta |
+        Mandi Dabwali | Mandideep | Mandla | Mandphiya | Mandsaur | Mandya | MANGALDOI | Mangalore | Manipal |
+        Manjeshwar | Manopad | Mansa | Manthani | Manuguru | Manvi | MARHOWARAH | Mariahu | Marigaon | Markapur |
+        Marthandam | Martur | Marwar Junction | MASAURHI | Masrakh | Mathania | Mathura | Mau | Mauranipur |
+        Mayiladuthurai | Mayurbhanj | Mecheda | Medak District | Medinipur | Meerut | Meerut District | Meham |
+        Mehmedabad | Mehsana | Melur | Memari | Menhdawal | Merta | Metpally | Mettala | Mettupalayam | Mettur | Mhow |
+        Milak | MINAKHAN | MIRGANJ | Miryalaguda | Mirzapur | Miyanganj | Modasa | Modinagar District | Moga |
+        Mogullapally | Mohali | Mohammadabad | Mohammadi | MOHAMMADPUR | MOHANA | Mokama | Mokokchung | Molakalmuru |
+        Mominpet | Moodabidri | Moradabad | Morena | Morshi | Motebeennura | Mothkur | Motihari | Mudarangady |
+        Muddebihal | Mudhol | Mudigere | Mudigubba | Mughal Sarai | Muktsar | Mulbagal | Multai | Mulugu | Mumbai |
+        Mumbai Rural | Mundakayam | Mundgod | Mungaoli | Munger | Munger | Mungra Badshahpur | Munnar | Munuvalli |
+        Muradnagar | Murshidabad | Muskara | Mussoorie | Muthukulathur | Muvattupuzha | Muzaffarnagar District |
+        Muzaffarpur | Muzaffarpur | Muzzafarpur | Mysore | Mysore Rural | Nabadwip | Nabarangapur | Nabha | Nadaun |
+        Nadia | Nadia | Nadiad | Nadoti | Nagamangala | Nagaon | Nagapattinam | Nagari | Nagarkurnool | Nagaur | Nagda |
+        Nagercoil | Nagina | Nagod | Nagpur | Nagpur Rural | Nahan | Naharlagun | Naidupeta | Naina Devi | Naini |
+        Nainital | Nainwa | Najibabad | NAKASHIPARA | Nakerakal | Nakodar | Nalanda | Nalbari | Nalgonda | Nallajerla |
+        Namakkal | Nandikotkur | Nandyal | Nanjangud | Nanpara | Narasannapeta | Narasaraopet | NARASINGHPUR |
+        Narayankhed | Narayanpet | NARAYANPUR | Narikkuni | Narketpalle | Narmetta | Narnaul | Narsampet | Narsapur |
+        Narsapur-TS | Narsinghgarh | Narsinghpur | Narsipatnam | Nashik | Nasirabad | Naugarh | Nautanwa | Navalgund |
+        Navipet | Navsari | Nawabganj | Nawabganj-UP | Nawada | Nawada | Nawalgarh | Nawanshahr | Nayagarh | Nayagarh |
+        NAZIRA | NAZIRPUR | Nedumangad | Nedumkandam | Neem ka Thana | Neemuch | Nellore | Nenmara | Nepanagar |
+        Nereducharla | Neyyattinkara | Nichlaul | Nighasan | Nileshwar | NIMAPARA | Nimbahera | Nipani | Nirmal |
+        Nizamabad District | Nizamabad-UP | Nohar | Noida Rural | Noida-Ghaziabad | Nokha | North 24 Parganas | North 24
+        Parganas | North Cachar Hills | North Dinajpur | NORTH LAKHIMPUR | North Paravur | North Sikkim | North Tripura
+        | Nuapada | NULL | Nuzvid | Oddanchatram | Ongole | Ooty | Orai | Ottapidaram | Pachore | PadampurRJ | Paderu |
+        Padmajiwadi | Padrauna | Paithani | Pakala | PAKRIBARWAN | Pakur | Pakyong | Palacode | Palakkad | Palakollu |
+        Palakonda | Palamaner | Palamau | Palani | Palanpur | Palasa | Pali Birsinghpur | Palitana | Palladam | Palwal |
+        Pamarru | Pamuru | Panchkula | Pandhurna | Pandikkad | Pandua | Pangodu | Panipat | Panja | Panna | Pansemal |
+        Panvel | Paonta Sahib | Paota | Papum Pare | Paramakudi | Parappa | Parasia | Pardi | Parippally | Parkal |
+        Parvathipuram | Parwanoo | Paschim Bardhaman | Patan | Patancheru | Pathanamthitta | Pathankot | Pathapatnam |
+        Patiala | Patna | Patna Rural | Patran | Patti | Patti-UP | Pattukkottai | Pauri | Pavagada | PAVAPURI | Pawai |
+        Pazhayannur | Pedabayalu | Pedapadu | PEDDAPALLI | Pehowa | Pench | Pendra | Pennadam | Pennagaram | Penugonda |
+        Peralam | Perambalur | Perambra | Perinthalmanna | Perumbavoor | Perunali | Perundurai | PETERBAR | Petlad |
+        Petlawad | Phagwara | Phalodi | Phalsund | Phek | Phephna | Phulera | PHUSRO | Pichhore | Piduguralla | Pihani |
+        Pilakhua District | Pilani | Pileru | Pilibanga | Pilibhit | Pilkhuwa | Pindwara | Piparcity | Pipariya | PIPILI
+        | Piriyapatna | PIRO | Pithampur | Pithoragarh | PLASSEY | Podili | Poinachi | Pokhran | Polay Kalan | Pollachi
+        | Polur | Ponnamaravathi | Pooh | Poonch | Poonchh | Prakasam | Prakasam District | Pratapgarh District |
+        Pratapgarh-RJ | Pregnapur | Prithvipur | Proddatur | Puducherry | Pudukkottai | Pukhrayan | Pulivendula |
+        Pulpally | Pune | Pune Rural | Punganur | Punjab | PUNJAB_3PL | Puranpur | Purba Bardhaman | Puri | Puri |
+        Puruliya | Pushpavanam | Puthukkad | Puttaparthi | Puttur | Puttur-AP | Raebareli District | RAGHUNATHPUR-BR |
+        Rahatgarh | Raibag | Raichur | Raigarh | Raikot | Raila | Raipur | Raipur Karchulion | Raipur-RJ | Raipura |
+        RAIRAKHOL | Raisen | Raisinghnagar | Rajahmundry | Rajamahendravaram | Rajampet | Rajapalayam | RAJASTHAN_3PL |
+        Rajesultanpur | RAJGANJ | Rajgarh | Rajgarh-HP | Rajgarh-MP | RAJGIR | Rajkot | Rajnandgaon | Rajpipla |
+        Rajsamand | Ramagundam | Ramanagara | Ramanathapura | Ramanathapuram | Ramannapeta | Ramdurg | Rameswaram |
+        Ramganj Mandi | Ramgarh | Ramgarh-RJ | Ramnagar | Rampachodavaram | Rampur | Rampur Naikin | Rampura Phul |
+        Ramtek | Ranchha | Ranchi | Ranebennur | RANGPO | Ranihati | Ranikhet | Ranipet | Raniwara | Ranni | Ras |
+        Rasipuram | Rasulabad | Ratangarh | Ratangarh-MP | Ratanpura | Rath | Ratia | Ratlam | Rawatbhata | Rawatsar |
+        Rayachoti | Rayadurgam | Rayagada | Rayaparthi | Razole | Reckong Peo | Reengus | Rehli | Renigunta | Renukoot |
+        Renwal | Reodar | Repalle | Rewa | Rewari | Ri Bhoi | Rishikesh | Robertsganj | Robertsonpet | Rohtak | Rohtas |
+        Rona | Roorkee | Rourkela | RS Pura | Rudauli | Rudhauli | Rudrangi | Rudraprayag | Rudrapur | RUNNISAIDPUR |
+        RUNNISAIDPUR | Rupnagar | S Kota | Sabalgarh | Sagar | Sagara | Sagwara | Saharanpur District | Saharsa |
+        Sahaswan | Sahibganj | Saidabad | Saiha | Sakleshpur | Salcete | Salem | Salempur | SALIPUR | Salumbar | Salur |
+        Samarlakota | Samastipur | Sambalpur | Sambalpur | Sambhal District | Sanawad | Sanchore | Sandur | Sangareddy |
+        Sangareddy District | Sangaria | Sangrur | Sankaramangalam | Sankarankovil | Sankarapuram | Sankari | Santipur |
+        Saoner | Sarada | SARAIYA | Saran | Saran | Sardarshahr | Sarni | Sasaram | Sathupally | Sathyamangalam | Satna
+        | Sattur | Saundatti | Sausar | Savadatti | Sawai Madhopur | Sedam | Seetharampram | Sehore | Semariya | Sendhwa
+        | Seoni | Seraikela-kharsawan | Serchhip | Sewarhi | Shadnagar | Shahabad Markanda | Shahabad-UP | Shahapur |
+        Shahdol | Shaheed Bhagat Singh Nagar | Shahganj | Shahgarh | Shahjahanpur | Shahpura | ShahpuraMP | Shajapur |
+        Shambhu | Shamli | Shanivarasanthe | Sheikhpura | SHEOHAR | SHEONAR | Sheopur | Shiggaon | Shikaripur |
+        Shikohabad | SHILLONG | Shilong | Shimla | Shimoga | Shiralakoppa | Shivpuri | Sholinghur | Shoranur | Shorapur
+        | SHRAVASTI | Shri Dungargarh | Shrimadhopur | Shujalpur | Sibsagar | Siddapur | Siddhpur | Siddipet District |
+        Sidhauli | Sidhi | Sidlaghatta | Sihor | Sihora | Sikandrabad | Sikar | Sikriganj | SILCHAR | Siliguri |
+        Silvassa | Silwani | Simalwara | Simdega | Sindagi | Sindhanur | Sindudurg | Singarayakonda | SINGHIA |
+        Singrauli | Sira | Sirathu | Sircilla District | SIRDALA | Sirikonda | Sirkazhi | Sirohi | Sirsa | Sirsi |
+        Siruguppa | Sirvella | Sitamarhi | Sitamarhi | Sitapur | Sitarganj | Sivaganga | Sivakasi | SIVASAGAR | Siwan |
+        Siwan | Siwani | Siyana | Sleemnabad | Sohagi | Sojat | Someshwar | Sompeta | Sonapur | SONBARSA | Sonepur |
+        Songadh | Sonipat | Sonitpur | Soraba | Soraon | Soro | South 24 Parganas | South 24 Parganas District | South
+        Dinajpur | South Garo Hills | South Sikkim | South Tripura | Sri City | Sri Hargobindpur | Srikakulam Disctrict
+        | Srikalahasti | Srinagar | Srinagar-UK | Sringeri | Srinivaspur | Sriperumbudur | Srirangapatna | Srisailam |
+        Srivijaynagar | Sujangarh | Sullia | Sullurupeta | Sultan Bathery | Sultana | SULTANGANJ | Sultanpur District |
+        Sultanpur Lodhi | Sumerpur | Sunam | Sundar Nagar | Sundergarh | Sundla | Supaul | SURAJGARHA | Surajpur jhikla
+        | Surat | Surat Rural | Suratgarh | Surathkal | Surguja | Suryapet District | SWARUPNAGAR | Tadepalligudem |
+        Tadipatri | Tadoor | Tadvai | Taherpur | Tahliwal | Talbahat | Talikoti | Tamluk | Tanakpur | Tanda | Tandur-TL
+        | Tanuku | Tarakeswar | Tarana | Taranagar | Tarn Taran Sahib | Tarsikka | Tawang | Tehri | Tekkali | Tenali |
+        Tendukheda | Tenkasi | Tezpur | Thachanattukara | Thakurnagar | Thalassery | Thalavadi | Thamarassery | Thanesar
+        | Thanjavur | Tharali | Theni | Theog | Thikri | Thirthahalli | Thirumalagiri | Thiruthuraipoondi | Thiruttani |
+        Thiruvadanai | Thiruvananthapuram | Thiruvarur | Thisayanvilai | Thodupuzha | Thoubal | Thrissur | Thuckalay |
+        Thuraiyur | Tijara | Tikamgarh | Tindivanam | Tinsukia | Tiptur | Tirap | Tirora | Tiruchendur | Tiruchengode |
+        Tiruchi | Tirunelveli | Tirupati | Tirupattur | Tiruppur | Tirur | Tiruvalla | Tiruvallur District |
+        Tiruvannamalai | Tirwanganj | Tiryani | Tonk | Tribeni | Trichy | Tripura | Tuensang | Tumakuru | Tundla |
+        Tungaturthi | Tuni | Turuvukere | Tuticorin | Udaipura | Udaipurwati | Udayagiri | Udgir | Udham-Singh-Nagar |
+        Udhampur | Udumalaipettai | Ugar | Ujjain | Ukhra | Ullal | ULUBERIA | Umaria | Umreth | Una-HP | Unjha | UNNAO
+        | Upper Siang | Upper Subansiri | Uravakonda | Usilampatti | Uthangarai | Utnoor | UTTAR PRADESH_3PL |
+        UTTARAKHAND_3PL | Uttarkashi | Vadakara | Vadipatti | Vadodara | Vadodara Rural | Vaidpura | Vaishali |
+        Valanchery | Vallioor | Valsad | Vandavasi | Vaniyambadi | Vapi | Varanasi | Veenavanka | Velgodu | Vellakovil |
+        Vellore | Velur | Vempalli | Venjaramoodu | Venkatagirikota | Venkatgiri | Vidisha | Vidyanagar | Vijapur |
+        Vijayapura | Vijayawada-Guntur | Vijayraghavgarh | Vikarabad | Vilathikulam | Viluppuram | Vinukonda | Virajpet
+        | Viratnagar | Virudhachalam | Virudhunagar | Visakhapatnam | Visakhapatnam District | Visnagar | Vissannapetaa
+        | Vitla | Vizag Rural | Vizianagaram | Vizianagaram Disctrict | Vuyyuru | Vyara | Wadala | Wanaparthy | Wani |
+        Warangal | Waraseoni | Wardha | Warora | Warud | WAZIRGANJ | Weir | West Champaran | West Garo Hills | West
+        Godavari District | West Kameng | West Khasi Hills | West Midnapore | West Siang | West Sikkim | West Singhbhum
+        | West Tripura | West-Godavari | Wyra | Yadgir | Yamuna Nagar | Yanam District | Yaragatti | Yavatmal | Yelburga
+        | Yellamanchili | Yellandu | Yellapur | Yellare | Yellareddipet | Yellareddy | Yemmiganur | Yerragonda Palem |
+        Yerravaram | Zahirabad | Zira | Zirakpur | Zunhebotto
+      </p>
+      <hr class="dotted">
+    </div>
+    <div class="container">
+      <div class="row">
+        <div class="col">
+          <ul type="none">
+            <h6>Popular Categories</h6>
+            <li><a href="#" class="text-light text-decoration-none fw-light">Sunflower Oils</a></li>
+            <li><a href="#" class="text-light text-decoration-none fw-light">Milk</a></li>
+            <li><a href="#" class="text-light text-decoration-none fw-light">Organic F&V</a></li>
+            <li><a href="#" class="text-light text-decoration-none fw-light">Floor Cleaners</a></li>
+            <li><a href="#" class="text-light text-decoration-none fw-light">Frozen Veg Food</a></li>
+          </ul>
+        </div>
+        <div class="col">
+          <ul type="none">
+            <li><a href="#" class="text-light text-decoration-none fw-light">Wheat Atta</a></li>
+            <li><a href="#" class="text-light text-decoration-none fw-light">Health Drinks</a></li>
+            <li><a href="#" class="text-light text-decoration-none fw-light">Namkeen</a></li>
+            <li><a href="#" class="text-light text-decoration-none fw-light">Other Juices</a></li>
+            <li><a href="#" class="text-light text-decoration-none fw-light">Diapers & Wipes</a></li>
+          </ul>
+        </div>
+        <div class="col">
+          <ul type="none">
+            <li><a href="#" class="text-light text-decoration-none fw-light">Ghee</a></li>
+            <li><a href="#" class="text-light text-decoration-none fw-light">Flakes</a></li>
+            <li><a href="#" class="text-light text-decoration-none fw-light">Eggs</a></li>
+            <li><a href="#" class="text-light text-decoration-none fw-light">Leafy Veg</a></li>
+          </ul>
+        </div>
+        <div class="col">
+          <ul type="none">
+            <h6 class="">Popular Brands</h6>
+            <li><a href="#" class="text-light text-decoration-none fw-light">Amul</a></li>
+            <li><a href="#" class="text-light text-decoration-none fw-light">Red Bull</a></li>
+            <li><a href="#" class="text-light text-decoration-none fw-light">Yummiez</a></li>
+            <li><a href="#" class="text-light text-decoration-none fw-light">Britannia</a></li>
+            <li><a href="#" class="text-light text-decoration-none fw-light">Haldiram's</a></li>
+          </ul>
+        </div>
+        <div class="col">
+          <ul type="none">
+            <li><a href="#" class="text-light text-decoration-none fw-light">Nescafe</a></li>
+            <li><a href="#" class="text-light text-decoration-none fw-light">elite cake</a></li>
+            <li><a href="#" class="text-light text-decoration-none fw-light">Yera</a></li>
+            <li><a href="#" class="text-light text-decoration-none fw-light">Wow! Momo</a></li>
+            <li><a href="#" class="text-light text-decoration-none fw-light">Ferrero</a></li>
+          </ul>
+        </div>
+        <div class="col">
+          <ul type="none">
+            <li><a href="#" class="text-light text-decoration-none fw-light">MTR</a></li>
+            <li><a href="#" class="text-light text-decoration-none fw-light">Pediasure</a></li>
+            <li><a href="#" class="text-light text-decoration-none fw-light">Yakult</a></li>
+            <li><a href="#" class="text-light text-decoration-none fw-light">Fortune</a></li>
+            <li><a href="#" class="text-light text-decoration-none fw-light">Lay's</a></li>
+          </ul>
+        </div>
+      </div>
+    </div>
+    <div class="container-fluid text-white bg-dark">
+      <p class="fw-light p-2 ms-5">Copyright &#169 2023-2025 Supermarket Grocery Supplies Pvt Ltd</p>
+    </div>
+  </footer>
+
+
+  <script>
+    const tooltipTriggerList = document.querySelectorAll('[data-bs-toggle="tooltip"]')
+    const tooltipList = [...tooltipTriggerList].map(tooltipTriggerEl => new bootstrap.Tooltip(tooltipTriggerEl))
+  </script>
+</body>
+
+</html>
